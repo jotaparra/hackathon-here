@@ -1,11 +1,9 @@
 [{"url":"./img/arturo.jpeg",
-    "thumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/11-09-fotofluege-cux-allg-25a.jpg/120px-11-09-fotofluege-cux-allg-25a.jpg",
-    "width":120,
-    "height":120,"title":"./img/arturo.jpeg",
-    "author":"Ralf Roletschek",
+    "thumbnail":"./img/arturo.jpeg",
+    "width":100,
+    "height":100,"title":"./img/arturo.jpeg",
     "license":null,
     "latitude":-33.595715,
     "longitude":-70.585197,
-    "pageid":"163384523",
     "fullurl":"//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/11-09-fotofluege-cux-allg-25a.jpg/300px-11-09-fotofluege-cux-allg-25a.jpg"}]
     

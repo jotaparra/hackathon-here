@@ -1,11 +1,122 @@
-[{"url":"./img/arturo.jpeg",
-    "thumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/11-09-fotofluege-cux-allg-25a.jpg/120px-11-09-fotofluege-cux-allg-25a.jpg",
-    "width":120,
-    "height":120,"title":"./img/arturo.jpeg",
-    "author":"Ralf Roletschek",
+[{ "thumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/1/13/La_Moneda%2C_the_chilean_White_House_in_Santiago.JPG/120px-La_Moneda%2C_the_chilean_White_House_in_Santiago.JPG",
+    "width":200,
+    "height":200,
+    "title":"La Moneda",
     "license":null,
-    "latitude":-33.595715,
-    "longitude":-70.585197,
-    "pageid":"163384523",
-    "fullurl":"//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/11-09-fotofluege-cux-allg-25a.jpg/300px-11-09-fotofluege-cux-allg-25a.jpg"}]
+    "latitude":-33.443018,
+    "longitude":-70.65387,
+    "fullurl":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/La_Moneda%2C_the_chilean_White_House_in_Santiago.JPG/120px-La_Moneda%2C_the_chilean_White_House_in_Santiago.JPG",
+    "texto":"Es la sede del presidente de la República de Chile. También alberga la Secretaría General de la Presidencia, y la Secretaría General de Gobierno"
+    },
     
+    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/8/86/Cementerio_General._Acceso_por_Avenida_La_paz..JPG",
+        "width":200,
+        "height":200,
+        "title":"Cementerio General",
+        "license":null,
+        "latitude": -33.412054,
+        "longitude":-70.641497,
+        "fullurl":"https://upload.wikimedia.org/wikipedia/commons/8/86/Cementerio_General._Acceso_por_Avenida_La_paz..JPG",
+        "texto":"Fue construido el 9 de diciembre de 1821 y fundado por Bernardo O’Higgins. Es un cementerio laico, el cual representa una perspectiva diferente de ver la historia de Chile, ya que alberga los restos de distintos personajes emblemáticos de la historia del país, desde presidentes de la republica hasta artistas y personajes populares de la idiosincrasia chilena. Es por esto que se le puede denominar como un museo al aire libre con un alto valor patrimonial e histórico.   Se crea por la necesidad de tener una solución sanitaria a las sepulturas, que en esos tiempos se hacía de manera distinta, donde en muchos casos se sepultaba a la gente en las mismas iglesias, provocando molestias de los eclesiásticos, o inclusive se hacía de mala forma, enterrando los cuerpos sin vida a poca profundidad, dándose un escenario de insalubridad que ponía en peligro la salud de la población cercana. Esto conllevo a que las autoridades se convencieran de que era necesario un campo santo para Santiago, poniendo en discusión el tema en el congreso. Luego, Joaquín Valdivieso hace las gestiones para obtener el predio de los Dominicos al norte de la ciudad, actual barrio de Recoleta, que reunía las condiciones para instalar un cementerio, ya que estaba distante de la ciudad y en las cercanías del cerro blanco, del cual se extraían las piedras para las fundaciones de este campo santo y las primeras sepulturas. El cementerio general ha sido testigo de la historia de Chile, de sus cambios culturales y de pensamientos o corrientes artísticas, viéndose reflejado en los diseños de las sepulturas, donde se pueden encontrar diseños creados en tiempos de la época colonial hasta los tiempos modernos actuales. "
+        },
+
+    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/3/37/Cementerio_Cat%C3%B3lico.jpg",
+        "width":200,
+        "height":200,
+        "title":"Cementerio Católico",
+        "license":null,
+        "latitude": -33.412628,
+        "longitude": -70.642269,
+        "fullurl":"https://upload.wikimedia.org/wikipedia/commons/3/37/Cementerio_Cat%C3%B3lico.jpg",
+        "texto":"Recinto destinado a las sepulturas de los feligreses católicos, construido en el año 1878 por el arquitecto francés Paul Lathoud y por iniciativa del presbítero José Luis Valenzuela. Se cree que el edificio siguió el modelo del cementerio de Génova. Interiormente responde a un esquema clásico, organizado en torno a corredores y patios bajo sencillas líneas que le otorgan solemnidad.También se pueden realizar visitas guiadas y/o tour nocturnos, donde se recorren diversas sepulturas que corresponden a personajes populares de leyendas y mitologías urbanas."
+        },
+    
+    { "thumbnail":"https://commons.wikimedia.org/wiki/File:Capilla_La_Vi%C3%B1ita.JPG",
+        "width":200,
+        "height":200,
+        "title":"Iglesia La Viñita",
+        "license":null,
+        "latitude": -33.421842,
+        "longitude": -70.645333,
+        "fullurl":"https://commons.wikimedia.org/wiki/File:Capilla_La_Vi%C3%B1ita.JPG",
+        "texto":"Se ubica en las faldas del Cerro Blanco, pero a cargo de una administración distinta. Es de propiedad privada de origen eclesiástico que también constituye un testimonio histórico de la comuna y de Santiago, en su fundación y en las labores evangelizadoras de los conquistadores en la época. Su creación se debe al recordatorio de la ermita que, en primera instancia, hizo construir Inés de Suarez en el cerro blanco, en honor a la Virgen de Montserrat, concluyendo su construcción en 1547. Posteriormente, por el paso del tiempo y las limitaciones naturales y topográficas del cerro blanco, se traslada a lo que hoy es la iglesia La Viñita, cuyo nombre se debe a las viñas que lo rodeaban al momento de su fundación en 1834 . Su valor patrimonial está determinado por su declaración como Monumento Histórico el 19 de Noviembre de 1990 por el Decreto Supremo N°751 y por sus características arquitectónicas de una corriente neoclásica y colonial, además de ser la primera iglesia que se construyó en Chile."
+        },
+    
+    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/8/82/Plazoleta_de_piedras_tacitas.JPG",
+        "width":200,
+        "height":200,
+        "title":"Plazoleta Piedras Tacitas",
+        "license":null,
+        "latitude": -33.416512,
+        "longitude": -70.644434,
+        "fullurl":"https://upload.wikimedia.org/wikipedia/commons/8/82/Plazoleta_de_piedras_tacitas.JPG",
+        "texto":"Vestigio arqueológico de gran valor cultural e histórico, declarado Monumento Histórico el 11 de marzo de 1992 por el Decreto Supremo N° 119. Corresponde a piedras arcaicas ubicadas en el sector nororiente del cerro, en su base, y que eran utilizadas por grupos indígenas prehispánicos para moler alimentos como el maíz o el peumo."
+        },
+
+    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/c/c5/Iglesia_de_la_Recoleta_Dominica_II.JPG",
+        "width":200,
+        "height":200,
+        "title":"Iglesia de la Recoleta Domínica",
+        "license":null,
+        "latitude":-33.423972,
+        "longitude": -70.644656,
+        "fullurl":"https://upload.wikimedia.org/wikipedia/commons/c/c5/Iglesia_de_la_Recoleta_Dominica_II.JPG",
+        "texto":"de construcción neoclásico y fue inaugurada en 1882, diseñada por el arquitecto italiano Eusebio Chelli, quien se inspiró en la Basílica Romana de San Pablo de extramuros. Una de sus principales características históricas es la participación del arquitecto chileno Manual Aldunate, quien diseño la cúpula y la fachada de este templo religioso, y que además fue quien dirigió los trabajos.Pertenece a la orden de Santo Domingo, conocida como la orden dominicana o la orden de predicadores. En la época de la colonia, en 1753 nace la idea de crear esta iglesia en unos terrenos donados por Rodrigo Quiroga e Inés de Suarez, donde además se funda un nuevo convento. Sin embargo, en 1882 se inaugura la iglesia de la Recoleta Dominica, luego de 30 años de construcción, y más tarde entre 1886 y 1888 se construye el convento adyacente. Actualmente, el recinto que originalmente era el claustro, alberga diferentes organismos destinados a la conservación, preservación y difusión del patrimonio nacional, mientras que la iglesia sigue en funcionamiento para la comunidad católica. En este recinto se puede observar e identificar diversos artículos que han sido un vestigio de la historia de la iglesia y de la comuna, que poseen un gran valor, y que varían en cuanto a su material, tales como la plata, oro, bronce, madera tallada, marfil, pinturas antiguas y figuras religiosas que representan momentos importantes para la religión católica y la misma orden dominica."
+        },
+    
+    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/b/b9/La_Vega_Central_%2815747341503%29.jpg",
+        "width":200,
+        "height":200,
+        "title":"La Vega",
+        "license":null,
+        "latitude":-33.4315,
+        "longitude": -70.651916,
+        "fullurl":"https://upload.wikimedia.org/wikipedia/commons/b/b9/La_Vega_Central_%2815747341503%29.jpg",
+        "texto":"Mercado ubicado en el extremo sur de la comuna de Recoleta, Santiago, casi llegando a la ribera norte del río Mapocho. En sus recintos se comercializan principalmente frutas y verduras, provenientes de los sectores agrícolas de la Zona Central de Chile.Desde la época colonial que en el sector de La Chimba se reunían campesinos a ofrecer sus productos. En el siglo XVIII, con la construcción del Puente de Calicanto, una gran cantidad de vendedores y feriantes comenzaron a establecerse en sus alrededores. Ya en el siglo XIX, cuando el sector era conocido como «La Vega del Mapocho», se delimitó y ordenó el terreno usado para el consumo de productos, aprovechando la canalización del río Mapocho. También se construyeron nuevos galpones para la descarga y venta de productos agrícolas. Gracias a la iniciativa de Agustín Gómez García, en el año 1895 comenzó la construcción de la Vega Central, con la instalación de bodegas de material sólido que fueron inauguradas en 1916"
+        },
+
+    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/b/b9/Explanada_P%C3%A9rgola_de_San_Francisco_1.jpg",
+        "width":200,
+        "height":200,
+        "title":"Pérgola de las Flores Santa María",
+        "license":null,
+        "latitude":	-33.429111,
+        "longitude": -70.649388,
+        "fullurl":"https://upload.wikimedia.org/wikipedia/commons/b/b9/Explanada_P%C3%A9rgola_de_San_Francisco_1.jpg",
+        "texto":"Su nombre es en honor a la Virgen María que es posible ver en la cima del Cerro San Cristóbal, y que desde ahí puede mirar y cuidar a los artesanos de la pérgola. Su origen se remonta al año 1939, cuando un grupo de personas vendía sus flores en la ribera del rio Mapocho en canastas y se vinculaba al pasar de los carros fúnebres que se dirigían al cementerio general. Actualmente se caracteriza por los homenajes que los locatarios realizan a personajes destacados del país, lanzando pétalos de flores mientras los cotejos fúnebres pasan hacia el cementerio. De la categoría de museos y manifestaciones culturales y de tipo lugares históricos, localizado en avenida La Paz esquina Artesanos, a un costado del mercado de abastos Tirso de Molina. El recinto cuenta con locales de venta de flores de variados tipos, arreglos florales y artesanía en flores. Ha sido distinguido como un lugar histórico de la comuna de recoleta, siendo reconocida con una placa patrimonial que contiene una breve reseña del lugar, destacando la importancia que ha tenido durante 75 años de historia y que el verdadero patrimonio de este son las personas que durante 4 generaciones trabajan artesanalmente en los arreglos florales. "
+        },
+
+    { "thumbnail":"https://www.monumentos.gob.cl/sites/default/files/styles/slide_monumentos/public/image-monumentos/dsc00576.jpg?itok=WBA6svRF",
+        "width":200,
+        "height":200,
+        "title":"Teatro Grez y Lavandería del Instituto Psiquiátrico Dr. José Horwitz",
+        "license":null,
+        "latitude":	-33.422833,
+        "longitude": -70.650777,
+        "fullurl":"https://www.monumentos.gob.cl/sites/default/files/styles/slide_monumentos/public/image-monumentos/dsc00576.jpg?itok=WBA6svRF",
+        "texto":"El Teatro Grez se inserta en las transformaciones que sucedieron en Chile entre los siglos XIX y XX: la Belle Époque, el incipiente desarrollo de las artes escénicas y la creciente profesionalización de la psiquiatría chilena, la cual fue enriquecida con ideas traídas desde Europa, y la llamada cuestión social, incorporando nuevos tratamientos para sanar o dar una mejor vida a los enfermos internados en la Casa de Orates: el trabajo, los espacios de libertad y entretenciones como la música, la danza y el teatro. En primera instancia, el teatro se concibió como parte de los salones Grez, en honor a su benefactor, Manuel Silvestre Grez (1821-1895), personaje perteneciente a la elite chilena de la época que al morir legó dinero para la Casa de Orates de Nuestra Señora de los Ángeles. Dichos salones fueron concebidos para tener una doble función: como estadía de enfermos y como espacio de entretención. El salón -posteriormente definido como teatro- comenzó su construcción en 1896, siendo inaugurado en julio de 1897."
+        },
+    
+    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/7/7d/25-09-2013_Parque_Cerro_Blanco_2.jpg",
+        "width":200,
+        "height":200,
+        "title":"Cerro Blanco",
+        "license":null,
+        "latitude":	-33.4214167,
+        "longitude": -70.646333,
+        "fullurl":"https://upload.wikimedia.org/wikipedia/commons/7/7d/25-09-2013_Parque_Cerro_Blanco_2.jpg",
+        "texto":"Es un atractivo que en condiciones normales podría tener cabida en los de tipo natural, sin embargo, su valor turístico es de tipo cultural, ya que posee una connotación religiosa y patrimonial. Esto porque en tiempos de la colonia fue un importante referente para la religión católica y un centro ceremonial para los pueblos originarios, que hasta hoy lo consideran como tal. Fue declarado Zona Típica el 19 de Noviembre de 1990 , mediante el Decreto Supremo N°751, tiene 383 metros de altura y 17,3 hectáreas. Posee un paisaje agreste debido a su escasa vegetación y su nombre se debe al color del tipo de piedra que se extrae del lugar.  Anteriormente se llamaba Cerro Wechuraba, denominación dada por los pueblos originarios cuando en sus faldas moraba el cacique con el mismo nombre. Los españoles lo llamaban Cerro Montserrat en honor a la virgen de Montserrat, en tiempos de la colonia, donde por mandato de doña Inés de Suarez se levanta un templo en su honor."
+        },
+    
+    { "thumbnail":"https://www.registromuseoschile.cl/663/articles-50668_imagen_09.jpg",
+        "width":200,
+        "height":200,
+        "title":"Museo Histórico Domínico",
+        "license":null,
+        "latitude":	-33.424555,
+        "longitude": -70.645444,
+        "fullurl":"https://www.registromuseoschile.cl/663/articles-50668_imagen_09.jpg",
+        "texto":"El Museo Histórico Dominico se encuentra ubicado en el Centro Patrimonial Recoleta Dominica, donde por centurias habitó la Orden de los Predicadores. La vida de los frailes al interior del claustro, sus costumbres y rituales le fueron dando características particulares a este lugar. Su historia y arquitectura tradicional y su legado histórico religioso, hacen de este edificio eclesial un espacio cultural muy interesante y digno de ser visitado. El conjunto de sus colecciones son acogidas en forma natural por esta sede arquitectónica, cuya restauración le ha mantenido su identidad y al mismo tiempo la ha puesto al servicio de su nuevo uso museístico."
+        }
+            
+    ]

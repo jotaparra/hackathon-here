@@ -92,8 +92,8 @@ function startClustering(map, ui, getBubbleContent, data) {
   }
   
   var platform = new H.service.Platform({
-    app_id: 'F8lTznIEpvu1Y1DxFWOo',
-    app_code: 'gEEMm8jLc9T1F8TOVfUmJg',
+    app_id: 'AnxmtQiJaqUhqh727ons',
+    app_code: 'atSov_wUVgtoOIZJmLX7HQ',
     useCIT: true,
     useHTTPS: true
   });
@@ -169,15 +169,9 @@ function startClustering(map, ui, getBubbleContent, data) {
           'href="', data.url, '" target="_blank">',
         '</a>',
         '<span>',
-          // Author info may be missing
-          data.author ? ['Photo by: ', '<a href="//commons.wikimedia.org/wiki/User:',
-            encodeURIComponent(data.author), '" target="_blank">',
-            data.author, '</a>'].join(''):'',
-          '<hr/>',
           '<a class="bubble-footer" href="//commons.wikimedia.org/" target="_blank">',
-            '<img class="bubble-logo" src="img/wikimedia-logo.png" />',
             '<span class="bubble-desc">',
-            'Photos provided by Wikimedia Commons are <br/>under the copyright of their owners.',
+            data.title+ ":" +" "+ data.texto,
             '</span>',
           '</a>',
         '</span>',

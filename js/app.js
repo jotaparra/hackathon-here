@@ -121,7 +121,6 @@ function startClustering(map, ui, getBubbleContent, data) {
     }
   }
 
-  
   function circlePoint(time) {
     var radius = 0.01;
     var x = Math.cos(time) * radius;
@@ -185,6 +184,86 @@ function startClustering(map, ui, getBubbleContent, data) {
       '</div>'
     ].join('');
   }
+
+ function routButoon(){
+  var routingParameters = {
+    // The routing mode:
+    'mode': 'fastest;car',
+    // punto de inicio
+    'waypoint0': 'geo!-33.595715,-70.585197',
+    // punto de llegada
+    'waypoint1': 'geo!-33.414625,-70.649315',
+    // To retrieve the shape of the route we choose the route
+    // representation mode 'display'
+    'representation': 'display',
+    'trafficMode':'enabled'
+  };
+  
+  // Define a callback function to process the routing response:
+  var onResult = function(result) {
+    console.log(result);
+    var route,
+      routeShape,
+      startPoint,
+      endPoint,
+      linestring;
+    if(result.response.route) {
+    // Pick the first route from the response:
+    route = result.response.route[0];
+    // Pick the route's shape:
+    routeShape = route.shape;
+  
+    // Create a linestring to use as a point source for the route line
+    linestring = new H.geo.LineString();
+  
+    // Push all the points in the shape into the linestring:
+    routeShape.forEach(function(point) {
+      var parts = point.split(',');
+      linestring.pushLatLngAlt(parts[0], parts[1]);
+    });
+  
+    // Retrieve the mapped positions of the requested waypoints:
+    startPoint = route.waypoint[0].mappedPosition;
+    endPoint = route.waypoint[1].mappedPosition;
+  
+    // Create a polyline to display the route:
+    var routeLine = new H.map.Polyline(linestring, {
+      style: {lineWidth: 8 },
+      arrows: { fillColor: 'white', frequency: 4, width: 0.8, length: 0.7 }
+    });
+  
+    // Create a marker for the start point:
+    var startMarker = new H.map.Marker({
+      lat: startPoint.latitude,
+      lng: startPoint.longitude
+    });
+  
+    // Create a marker for the end point:
+    var endMarker = new H.map.Marker({
+      lat: endPoint.latitude,
+      lng: endPoint.longitude
+    });
+  
+    // Add the route polyline and the two markers to the map:
+    map.addObjects([routeLine, startMarker, endMarker]);
+  
+    // Set the map's viewport to make the whole route visible:
+    map.setViewBounds(routeLine.getBounds());
+    }
+  };
+  
+  
+// Obtener una instancia del servicio de enrutamiento:
+  var router = platform.getRoutingService();
+  
+// Llame a calculaRoute () con los parámetros de enrutamiento,
+  // la devolución de llamada y una función de devolución de llamada de error (llamada si
+  // se produce un error de comunicación):
+  router.calculateRoute(routingParameters, onResult,
+    function(error) {
+      alert(error.message);
+    });
+ }
  
 // Paso 5: Solicitar datos que se visualizarán en un mapa.
   //

@@ -3,9 +3,9 @@
 }
 /* sección splash */
 
-#splash{
-    display: none;
-}
+/* #splash{
+    display: none; */
+
 .background-body{
   background-color:#E70CA9;
   
@@ -15,7 +15,9 @@
 }
 
 /* sección presentación */
-
+/* #presentacion{
+    display:none;
+} */
 #presentacion p{
     font-size: 18px;
 }
@@ -36,8 +38,91 @@ h3{
 }
 
 /* sección login */
+#loggin {
+    min-height: 100vh;
+}
+
+.texto-login{
+    font-weight: bold;
+    color: #505050;
+    padding-top: 50px; 
+    font-size: 20px;
+}
+
+.btn-iniciar{
+    width: 307px;
+    height: 48px;
+    background: #0036E4;
+    border-radius: 60px;
+    color: white;
+}
+
+.btn-registrar{
+    width: 307px;
+    height: 48px;
+    border: 1px solid #969696;
+    border-radius: 60px;
+    background: white;
+}
+#loggin form input {
+    width: 400px;
+    height: 48px;
+    border-radius: 60px;
+}
+.texto-pequeno{
+    font-size: 18px!important;
+    text-decoration: underline;
+}
+
+.mostrar-logos{
+    display: none;
+}
+
+.logos-rrss {
+    justify-content: center;
+    text-align: center;
+}
+
+.logos-rrss a {
+    font-size: 25px;
+    color: azure;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logos-rrss a:hover{
+    opacity: 0.6;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.btn-rrss{
+    background: none;
+    border: 0;
+     color: inherit;
+     /* cursor: default; */
+     font: inherit;
+     line-height: normal;
+}
 
 
+
+.azul-facebook{
+    background-color: #3b5998;
+}
+
+.celeste-twitter{
+    background-color: #1da1f2;
+}
+.rojo-googlemas{
+    background-color: #ea4335;
+}
 
 #mapa{
     display: none;

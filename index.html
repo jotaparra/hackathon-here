@@ -8,6 +8,8 @@
     <title>QCTG</title>
     <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
         crossorigin="anonymous"></script>
@@ -63,80 +65,113 @@
     </style>
 </head>
 
-<body>
-
-    <section id='splash' class="background-body">
-        <div class="row minh-100">
-            <div class="col-12 text-center align-self-center">
-                <img src="./img/logo_splash.png" alt="logo explora cultura">
-            </div>
-        </div>
-
-    </section>
-    <section id='presentacion'>
-
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item text-center active">
-                    <div class="pt-4 titulo-carrousel">
-                        <h3 class="pt-5">¡Explora tu ciudad!</h3>
-                    </div>
-                    <div class='text-center'>
-                        <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
-                    </div>
-                    <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <div class="pt-4 titulo-carrousel">
-                        <h3 class="pt-5">¡Aprende...!</h3>
-                    </div>
-                    <div class='text-center'>
-                        <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
-                    </div>
-                    <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <div class="pt-4 titulo-carrousel">
-                        <h3 class="pt-5">¡Gana premios!</h3>
-                    </div>
-                    <div class='text-center'>
-                        <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
-                    </div>
-                    <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
-                    <button>Comenzar a jugar!</button>
+<body onload="showMarker()">
+    <div class="container">
+        <!----- SECCION SPLASH ------>
+        <section id='splash' class="background-body">
+            <div class="row minh-100">
+                <div class="col-12 text-center align-self-center">
+                    <img src="./img/logo_splash.png" alt="logo explora cultura">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
 
-    </section>
+        </section>
+
+        <!----- SECCION PRESENTACION ------>
+        <section id='presentacion'>
+
+            <div id="carouselExampleIndicators" class="carousel slide minh-100" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item text-center active">
+                        <div class="pt-4 titulo-carrousel">
+                            <h3 class="pt-5">¡Explora tu ciudad!</h3>
+                        </div>
+                        <div class='text-center'>
+                            <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
+                        </div>
+                        <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <div class="pt-4 titulo-carrousel">
+                            <h3 class="pt-5">¡Aprende...!</h3>
+                        </div>
+                        <div class='text-center'>
+                            <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
+                        </div>
+                        <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <div class="pt-4 titulo-carrousel">
+                            <h3 class="pt-5">¡Gana premios!</h3>
+                        </div>
+                        <div class='text-center'>
+                            <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
+                        </div>
+                        <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
+                        <button>Comenzar a jugar!</button>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+        <!----- SECCION LOGGIN ------>
+        <section id="loggin" class="minh-100">
+            <div class="row">
+                <div class="col-12 text-center pt-5">
+                    <img src="img/logo_splash_magenta.png" alt="logo explora">
+                    <p class="texto-login text-center">
+                        Descubre una nueva manera <br> de ver tu ciudad
+                    </p>
+                </div>
+                <form class="col-12 col-md-4 offset-md-4 text-center" action="javascript:void(0)">
+                    <input class="col-10" id="" type="email" placeholder="Email usuario">
+                    <input class="col-10 mt-1" id="" type="password" placeholder="Contraseña">
+                    <button type='button' class="text-center col-10 mt-1 btn-iniciar" id="">Iniciar sesión </button>
+                    <button type='button' class="text-center col-10 mt-1 btn-registrar" id="">Registrarme</button>
+                </form>
+            </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                            <button id='showRrss' class="btn-rrss"><p class="texto-pequeno pt-3">o inicia sesión con otra cuenta</p></button>
+                    </div>
+                    <div class="col-12 logos-rrss mostrar-logos">
+                        <a class="azul-facebook text-center" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="celeste-twitter text-center" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="rojo-googlemas text-center" href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+            
+        </section>
 
 
 
 
-    <section id='mapa'>
+        <section id='mapa'>
 
-        <!-- <body onload="showMarker()"> -->
-        <h1>RECORRIDO CULTURAL QCTG</h1>
-        <p>Los lugares culturales de Santiago a la palma de tu mano</p>
-        <div id="map" style="width: 600px; height: 400px; background: grey"></div>
-        <p></p>
-        <button onclick="routButoon()">Trazar ruta</button>
-    </section>
+            <!-- <body onload="showMarker()"> -->
+            <h1>RECORRIDO CULTURAL QCTG</h1>
+            <p>Los lugares culturales de Santiago a la palma de tu mano</p>
+            <div id="map" style="width: 600px; height: 400px; background: grey"></div>
+            <p></p>
+            <button onclick="routButoon()">Trazar ruta</button>
+        </section>
+    </div>
 
     <script type="text/javascript" src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

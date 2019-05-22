@@ -160,6 +160,7 @@ function startClustering(map, ui, getBubbleContent, data) {
      markerAnt=marker;
    }
   }
+    
   function getBubbleContent(data) {
     return [
       '<div class="bubble">',
@@ -168,15 +169,21 @@ function startClustering(map, ui, getBubbleContent, data) {
           'href="', data.url, '" target="_blank">',
         '</a>',
         '<span>',
+          data.author ? ['Photo by: ', '<a href="//commons.wikimedia.org/wiki/User:',
+            encodeURIComponent(data.author), '" target="_blank">',
+            data.author, '</a>'].join(''):'',
+          '<hr/>',
           '<a class="bubble-footer" href="//commons.wikimedia.org/" target="_blank">',
+            '<img class="bubble-logo" src="img/wikimedia-logo.png" />',
             '<span class="bubble-desc">',
-            data.title+ ":" +" "+ data.texto,
+            'Photos provided by Wikimedia Commons are <br/>under the copyright of their owners.',
             '</span>',
           '</a>',
         '</span>',
       '</div>'
     ].join('');
   }
+
 
   //INICIO ENCONTRAR RUTA
  function routButoon(){

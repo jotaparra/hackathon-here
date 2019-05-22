@@ -1,4 +1,3 @@
-
 [{ "thumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/1/13/La_Moneda%2C_the_chilean_White_House_in_Santiago.JPG/120px-La_Moneda%2C_the_chilean_White_House_in_Santiago.JPG",
     "width":200,
     "height":200,
@@ -121,13 +120,3 @@
         }
             
     ]
-[{"url":"./img/arturo.jpeg",
-    "thumbnail":"./img/arturo.jpeg",
-    "width":100,
-    "height":100,"title":"./img/arturo.jpeg",
-    "license":null,
-    "latitude":-33.595715,
-    "longitude":-70.585197,
-    "fullurl":"//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/11-09-fotofluege-cux-allg-25a.jpg/300px-11-09-fotofluege-cux-allg-25a.jpg"}]
-    
-

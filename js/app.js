@@ -1,14 +1,13 @@
-//HACIA ABAJO CODIGO DE MARCELA
 /**
-* Hacer agrupación de marcadores con un tema personalizado.
-*
-* Tenga en cuenta que el módulo de agrupación de mapas http://js.api.here.com/v3/3.0/mapsjs-clustering.js
-* Debe cargarse para usar el Clustering
+ * Make clustering of markers with a custom theme
  *
- * @param {H.Map} map Una instancia de mapa AQUÍ dentro de la aplicación
- * @param {H.ui.UI} ui Componente ui predeterminado
- * @param {Function} getBubbleContent Función que devuelve información detallada sobre la foto.
- * @param {Array.<Object>} data Datos crudos que contienen información sobre cada foto.
+ * Note that the maps clustering module http://js.api.here.com/v3/3.0/mapsjs-clustering.js
+ * must be loaded to use the Clustering
+ *
+ * @param {H.Map} map A HERE Map instance within the application
+ * @param {H.ui.UI} ui Default ui component
+ * @param {Function} getBubbleContent Function returning detailed information about photo
+ * @param {Array.<Object>} data Raw data containing information about each photo
  */
 let firstPosition=0;
 function startClustering(map, ui, getBubbleContent, data) {
@@ -29,20 +28,20 @@ function startClustering(map, ui, getBubbleContent, data) {
     getClusterPresentation: function (cluster) {
       var randomDataPoint = getRandomDataPoint(cluster),
         data = randomDataPoint.getData();
-        
+
       var clusterMarker = new H.map.Marker(cluster.getPosition(), {
         icon: new H.map.Icon(data.thumbnail, {
           size: {w: 50, h: 50},
           anchor: {x: 25, y: 25}
         }),
-  
+
         min: cluster.getMinZoom(),
         max: cluster.getMaxZoom()
       });
-  
+
       clusterMarker.setData(data)
         .addEventListener('tap', onMarkerClick);
-  
+
       return clusterMarker;
     },
     getNoisePresentation: function (noisePoint) {
@@ -56,7 +55,7 @@ function startClustering(map, ui, getBubbleContent, data) {
         });
       noiseMarker.setData(data);
       noiseMarker.addEventListener('tap', onMarkerClick);
-  
+
       return noiseMarker;
     }
   };
@@ -66,10 +65,10 @@ function startClustering(map, ui, getBubbleContent, data) {
     cluster.forEachDataPoint(dataPoints.push.bind(dataPoints));
     return dataPoints[Math.random() * dataPoints.length | 0];
   }
-  
-  /** 
-* Controlador de eventos CLICK / TAP para nuestros marcadores. Ese marcador puede representar una sola foto o
-   * un grupo (grupo de fotos)
+
+  /**
+   * CLICK/TAP event handler for our markers. That marker can represent either a single photo or
+   * a cluster (group of photos)
    * @this {H.map.Marker}
    */
   function onMarkerClick() {
@@ -88,40 +87,42 @@ function startClustering(map, ui, getBubbleContent, data) {
       bubble.setContent(bubbleContent);
       bubble.open();
     }
-  
+
     map.setCenter(position, true);
   }
-  
+
   var platform = new H.service.Platform({
-    app_id: 'F8lTznIEpvu1Y1DxFWOo',
-    app_code: 'gEEMm8jLc9T1F8TOVfUmJg',
+    app_id: 'AnxmtQiJaqUhqh727ons',
+    app_code: 'atSov_wUVgtoOIZJmLX7HQ',
     useCIT: true,
     useHTTPS: true
   });
   var defaultLayers = platform.createDefaultLayers();
-   
-// Paso 2: inicialice un mapa, no especificar una ubicación le dará una visión global.
+
+  //Step 2: initialize a map  - not specificing a location will give a whole world view.
   var map = new H.Map(document.getElementById('map'),
     defaultLayers.normal.map);
-  
-// Paso 3: hacer el mapa interactivo
-  // MapEvents habilita el sistema de eventos
-  // Comportamiento implementa interacciones predeterminadas para panorámica / zoom (también en entornos táctiles móviles)
+
+  //Step 3: make the map interactive
+  // MapEvents enables the event system
+  // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
   var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-  
-// Crear los componentes de la interfaz de usuario predeterminados
+
+  // Create the default UI components
   var ui = H.ui.UI.createDefault(map, defaultLayers);
-  
-// Ahora usa el mapa como se requiere ...
+
+  // Now use the map as required...
   moveMapToBerlin(map);
-  
+
   function moveMapToBerlin(map,op,position){
     if(op===1){
+      console.log(position);
       map.setCenter({lat: position.coords.latitude , lng:position.coords.longitude});
       map.setZoom(16);
     }
-  }
 
+
+  }
   function circlePoint(time) {
     var radius = 0.01;
     var x = Math.cos(time) * radius;
@@ -132,35 +133,34 @@ function startClustering(map, ui, getBubbleContent, data) {
   function showMarker(){
     navigator.geolocation.getCurrentPosition(showPosition);
     loadPoint();
- setInterval(function(){navigator.geolocation.getCurrentPosition(showPosition);},3000);
+    setInterval(function(){navigator.geolocation.getCurrentPosition(showPosition);},3000);
 
   }
   var marker=0;
   var markerAnt=0;
   function showPosition(position){
-   
-   var icon= new H.map.Icon("./img/icon.gif", {
+
+  var icon= new H.map.Icon("./img/icon.gif", {
       size: {w: 20, h: 20},
       anchor: {x: 10, y: 10}
     });
-   if(marker === 0){
+  if(marker === 0){
     marker = new H.map.Marker({lat: position.coords.latitude , lng:position.coords.longitude}, { icon: icon},{optimized:false});
-// Asegúrate de que el marcador pueda recibir eventos de arrastre
+    // Ensure that the marker can receive drag events
     marker.draggable = true;
     map.addObject(marker);
     markerAnt=marker;
     moveMapToBerlin(map,1,position);
-   }else{
-     map.removeObject(markerAnt);
-     marker = new H.map.Marker({lat: position.coords.latitude , lng:position.coords.longitude}, { icon: icon },{optimized:false});
-     
-// Asegúrate de que el marcador pueda recibir eventos de arrastre
-     marker.draggable = true;
-     map.addObject(marker);
-     markerAnt=marker;
-   }
+  }else{
+    map.removeObject(markerAnt);
+    marker = new H.map.Marker({lat: position.coords.latitude , lng:position.coords.longitude}, { icon: icon },{optimized:false});
+    // Ensure that the marker can receive drag events
+    marker.draggable = true;
+    map.addObject(marker);
+    markerAnt=marker;
   }
-    
+  }
+
   function getBubbleContent(data) {
     return [
       '<div class="bubble">',
@@ -169,16 +169,9 @@ function startClustering(map, ui, getBubbleContent, data) {
           'href="', data.url, '" target="_blank">',
         '</a>',
         '<span>',
-         
-// Puede que falte la información del autor
-          data.author ? ['Photo by: ', '<a href="//commons.wikimedia.org/wiki/User:',
-            encodeURIComponent(data.author), '" target="_blank">',
-            data.author, '</a>'].join(''):'',
-          '<hr/>',
           '<a class="bubble-footer" href="//commons.wikimedia.org/" target="_blank">',
-            '<img class="bubble-logo" src="img/wikimedia-logo.png" />',
             '<span class="bubble-desc">',
-            'Photos provided by Wikimedia Commons are <br/>under the copyright of their owners.',
+            data.title+ ":" +" "+ data.texto,
             '</span>',
           '</a>',
         '</span>',
@@ -186,95 +179,100 @@ function startClustering(map, ui, getBubbleContent, data) {
     ].join('');
   }
 
- function routButoon(){
-  var routingParameters = {
-    // The routing mode:
-    'mode': 'fastest;car',
-    // punto de inicio
-    'waypoint0': 'geo!-33.595715,-70.585197',
-    // punto de llegada
-    'waypoint1': 'geo!-33.414625,-70.649315',
-    // To retrieve the shape of the route we choose the route
-    // representation mode 'display'
-    'representation': 'display',
-    'trafficMode':'enabled'
-  };
-  
-  // Define a callback function to process the routing response:
-  var onResult = function(result) {
-    console.log(result);
-    var route,
-      routeShape,
-      startPoint,
-      endPoint,
-      linestring;
-    if(result.response.route) {
-    // Pick the first route from the response:
-    route = result.response.route[0];
-    // Pick the route's shape:
-    routeShape = route.shape;
-  
-    // Create a linestring to use as a point source for the route line
-    linestring = new H.geo.LineString();
-  
-    // Push all the points in the shape into the linestring:
-    routeShape.forEach(function(point) {
-      var parts = point.split(',');
-      linestring.pushLatLngAlt(parts[0], parts[1]);
-    });
-  
-    // Retrieve the mapped positions of the requested waypoints:
-    startPoint = route.waypoint[0].mappedPosition;
-    endPoint = route.waypoint[1].mappedPosition;
-  
-    // Create a polyline to display the route:
-    var routeLine = new H.map.Polyline(linestring, {
-      style: {lineWidth: 8 },
-      arrows: { fillColor: 'white', frequency: 4, width: 0.8, length: 0.7 }
-    });
-  
-    // Create a marker for the start point:
-    var startMarker = new H.map.Marker({
-      lat: startPoint.latitude,
-      lng: startPoint.longitude
-    });
-  
-    // Create a marker for the end point:
-    var endMarker = new H.map.Marker({
-      lat: endPoint.latitude,
-      lng: endPoint.longitude
-    });
-  
-    // Add the route polyline and the two markers to the map:
-    map.addObjects([routeLine, startMarker, endMarker]);
-  
-    // Set the map's viewport to make the whole route visible:
-    map.setViewBounds(routeLine.getBounds());
-    }
-  };
-  
-  
-// Obtener una instancia del servicio de enrutamiento:
-  var router = platform.getRoutingService();
-  
-// Llame a calculaRoute () con los parámetros de enrutamiento,
-  // la devolución de llamada y una función de devolución de llamada de error (llamada si
-  // se produce un error de comunicación):
-  router.calculateRoute(routingParameters, onResult,
-    function(error) {
-      alert(error.message);
-    });
- }
- 
-// Paso 5: Solicitar datos que se visualizarán en un mapa.
+  // Step 5: Request data that will be visualized on a map.
   //
-  // Para mayor comodidad, hemos incluido la biblioteca jQuery para hacer una llamada AJAX para hacer esto.
-  // Para obtener más información, consulte: http://api.jquery.com/jQuery.getJSON/
+  //  For convenience we have included the jQuery library to make an AJAX call to do this.
+  //  For more information see: http://api.jquery.com/jQuery.getJSON/
   //
-  // La biblioteca jQuery está disponible bajo una licencia MIT https://jquery.org/license/
+  //  The jQuery library is available under an MIT license  https://jquery.org/license/
   //
   function loadPoint(){
     jQuery.getJSON("data/pointJson.json", function (data) {
       startClustering(map, ui, getBubbleContent, data);
     });
   }
+
+//INICIO ENCONTRAR RUTA
+function routButoon(){
+//-33.362357, -70.726141   cementerio -33.414625,-70.649315
+var routingParameters = {   
+// El modo de enrutamiento:
+  'mode': 'fastest;car',
+  // punto de inicio
+  'waypoint0': 'geo!-33.595715,-70.585197',
+  // punto de llegada
+  'waypoint1': 'geo!-33.362357,-70.726141',
+
+// Para recuperar la forma de la ruta elegimos la ruta
+  // modo de representación 'display'
+  'representation': 'display',
+  'trafficMode':'enabled'
+};
+
+// Definir una función de devolución de llamada para procesar la respuesta de enrutamiento:
+var onResult = function(result) {
+  console.log(result);
+  var route,
+    routeShape,
+    startPoint,
+    endPoint,
+    linestring;
+  if(result.response.route) {
+  
+// Escoge la primera ruta de la respuesta
+  route = result.response.route[0];
+// Escoge la forma de la ruta:
+  routeShape = route.shape;
+
+  
+// Crear una serie lineal para usar como fuente puntual para la línea de ruta
+  linestring = new H.geo.LineString(); 
+  
+// Empuje todos los puntos en la forma en la cadena lineal:
+  routeShape.forEach(function(point) {
+    var parts = point.split(',');
+    linestring.pushLatLngAlt(parts[0], parts[1]);
+  });
+
+// Recuperar las posiciones mapeadas de los puntos de ruta solicitados:
+  startPoint = route.waypoint[0].mappedPosition;
+  endPoint = route.waypoint[1].mappedPosition;
+
+  
+// Crear una polilínea para mostrar la ruta:
+  var routeLine = new H.map.Polyline(linestring, {
+    style: {lineWidth: 8 },
+    arrows: { fillColor: 'white', frequency: 4, width: 0.8, length: 0.7 }
+  });
+
+// Crear un marcador para el punto de inicio:
+  var startMarker = new H.map.Marker({
+    lat: startPoint.latitude,
+    lng: startPoint.longitude
+  });
+
+// Crear un marcador para el punto final:
+  var endMarker = new H.map.Marker({
+    lat: endPoint.latitude,
+    lng: endPoint.longitude
+  });
+
+// Añadir la polilínea de la ruta y los dos marcadores al mapa:
+  map.addObjects([routeLine, startMarker, endMarker]); 
+
+// Establezca la ventana gráfica del mapa para que toda la ruta sea visible:
+  map.setViewBounds(routeLine.getBounds());
+  }
+};
+// Obtener una instancia del servicio de enrutamiento:
+var router = platform.getRoutingService();
+
+// Llame a calculaRoute () con los parámetros de enrutamiento,
+// la devolución de llamada y una función de devolución de llamada de error (llamada si
+// se produce un error de comunicación):
+router.calculateRoute(routingParameters, onResult,
+  function(error) {
+    alert(error.message);
+  });
+}
+//FIN ENCONTRAR RUTA

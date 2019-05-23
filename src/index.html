@@ -77,57 +77,7 @@
 
     </section>
 
-    <!----- SECCION PRESENTACION ------>
-    <section id='presentacion'>
 
-        <div id="carouselExampleIndicators" class="carousel slide minh-100" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item text-center active">
-                    <div class="pt-4 titulo-carrousel">
-                        <h3 class="pt-5">¡Explora tu ciudad!</h3>
-                    </div>
-                    <div class='text-center'>
-                        <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
-                    </div>
-                    <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <div class="pt-4 titulo-carrousel">
-                        <h3 class="pt-5">¡Aprende...!</h3>
-                    </div>
-                    <div class='text-center'>
-                        <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
-                    </div>
-                    <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <div class="pt-4 titulo-carrousel">
-                        <h3 class="pt-5">¡Gana premios!</h3>
-                    </div>
-                    <div class='text-center'>
-                        <div class="col-12 offset-md-4 col-md-4 caja-ejemplo"></div>
-                    </div>
-                    <p class="pt-5">Con explora cultura podrás explorar y descubrir...</p>
-                    <button>Comenzar a jugar!</button>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section>
 
     <!----- SECCION LOGGIN ------>
     <section id="loggin" class="minh-100 background-body">
@@ -140,8 +90,9 @@
             </div>
             <form class="col-12 col-md-4 offset-md-4 text-center" action="javascript:void(0)">
 
-                <button type='button' class="text-center col-10 mt-1 btn-registrar" id="">Registrarme</button>
-                <button type='button' class="text-center col-10 mt-3 btn-iniciar" id="">Ya tengo una cuenta</button>
+                <button type='button' class="text-center col-10 mt-1 btn-registrar" id="registrar">Registrarme</button>
+                <button type='button' class="text-center col-10 mt-3 btn-iniciar" id="iniciarSesion">Ya tengo una
+                    cuenta</button>
             </form>
         </div>
 
@@ -174,7 +125,7 @@
                 </div> -->
 
 
-    <!-- SECCION NAV -->
+    <!-- ACTIVAR UBICACION -->
     <section id="activarUbicacion">
         <div class="row minh-100">
             <div class="col-12">
@@ -187,6 +138,7 @@
         </div>
     </section>
 
+    <!-- FILTRAR COMUNA -->
     <section id="filtrarComuna">
         <div class="row minh-100">
             <div class="col-12">
@@ -198,6 +150,70 @@
         </div>
     </section>
 
+    <!-- SECCION POSTAL -->
+    
+        <div id="card" class="row minh-100 justify-content-center">
+            <div class="col-10 mt-3 col-md-4 postal text-center">
+                <p class="titulo-postal pt-3"><span class="morado">Barrio Recoleta</span><br>
+                    Cementerio general 
+                 </p>
+                <img class="img-postal" src="./img/imagen-ejemplo.png" alt="imagen ejemplo">
+
+                <div class="row pt-2">
+                    <div class="col-5 offset-1">
+                        <p class="subtitulo-postal">
+                            Horario
+                        </p>
+                        <p class="texto-postal">
+                            Lunes a domingo
+                            9:00 a 17:30 hrs.
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p class="subtitulo-postal">
+                            Dirección
+                        </p>
+                        <p class="texto-postal">
+                            Prof. Zañartu 951,
+                            Recoleta, Santiago
+                        </p>
+                    </div>
+                </div>
+                <div class="box-iconos pt-3">
+                        <img src="./img/accesibilidad.png" alt="">
+                        <img src="./img/gratis.png" alt="">
+                        <img src="./img/banos.png" alt="">
+                </div>
+                <div>
+                        <button type='button' class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">¿Cómo llegar?</button>
+                </div>
+            </div>
+        </div>
+
+         <!-- SECCION GANASTE -->
+    
+         <div id="ganaste" class="row minh-100 justify-content-center">
+                <div class="col-10 mt-3 col-md-4 postal text-center">
+                    <p class="mensajes pt-3 pb-0 mb-0">Llegaste al punto: 
+                       <h3> Cementerio general </h3>
+                     </p>
+                    <img src="./img/trofeo.png" alt="imagen ejemplo">
+                    <p class="mensajes pt-3 pb-0 mb-0">¡Ganaste tu primera medalla!</p>
+                    <p class="miniatura pt-2">El cementerio general fuen fundado 9 de diciembre de 1821, <span class="bold">¡ya tiene  197 años!</span></p>
+                    <div class="box-iconos pt-1">
+                            <img src="./img/accesibilidad.png" alt="">
+                            <img src="./img/gratis.png" alt="">
+                            <img src="./img/banos.png" alt="">
+                    </div>
+                    <div>
+                            <button type='button' class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+            
+   
+
+    <!-- NAV -->
     <ul class="nav col-12 bottom fixed-bottom justify-content-around pt-2">
         <li class="nav-item">
             <a href="#"><img src="./img/icono-home-gris.png" alt=""></a>
@@ -216,14 +232,16 @@
 
     <!-- SECCION ACTIVAR UBICACION-->
 
-    <section id='mapa' onload="showMarker()">
+    <section id='mapa' onload="showMarker()" class="row minh-100">
         <h1>RECORRIDO CULTURAL QCTG</h1>
         <p>Los lugares culturales de Santiago a la palma de tu mano</p>
         <div id="map" style="width: 1000px; height: 400px; background: grey"></div>
         <button onclick="routButoon()">Trazar ruta</button>
-
-      
     </section>
+
+
+
+
     <script type="text/javascript" src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

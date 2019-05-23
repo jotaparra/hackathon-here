@@ -4,6 +4,7 @@ showRrss.addEventListener("click", () => {
   document.getElementsByClassName("mostrar-logos")[0].classList.remove("mostrar-logos");
 })
 
+
 //HACIA ABAJO CODIGO DE MARCELA
 /**
 * Hacer agrupación de marcadores con un tema personalizado.
@@ -11,7 +12,7 @@ showRrss.addEventListener("click", () => {
 * Tenga en cuenta que el módulo de agrupación de mapas http://js.api.here.com/v3/3.0/mapsjs-clustering.js
 * Debe cargarse para usar el Clustering
  *
- * @param {H.Map} map Una instancia de mapa AQUÍ dentro de la aplicación
+ * @param {H.Map} map Una instancia de mapa HERE dentro de la aplicación
  * @param {H.ui.UI} ui Componente ui predeterminado
  * @param {Function} getBubbleContent Función que devuelve información detallada sobre la foto.
  * @param {Array.<Object>} data Datos crudos que contienen información sobre cada foto.
@@ -175,16 +176,9 @@ function startClustering(map, ui, getBubbleContent, data) {
           'href="', data.url, '" target="_blank">',
         '</a>',
         '<span>',
-         
-// Puede que falte la información del autor
-          data.author ? ['Photo by: ', '<a href="//commons.wikimedia.org/wiki/User:',
-            encodeURIComponent(data.author), '" target="_blank">',
-            data.author, '</a>'].join(''):'',
-          '<hr/>',
           '<a class="bubble-footer" href="//commons.wikimedia.org/" target="_blank">',
-            '<img class="bubble-logo" src="img/wikimedia-logo.png" />',
             '<span class="bubble-desc">',
-            'Photos provided by Wikimedia Commons are <br/>under the copyright of their owners.',
+            data.title+ ":" +" "+ data.texto,
             '</span>',
           '</a>',
         '</span>',
@@ -192,21 +186,25 @@ function startClustering(map, ui, getBubbleContent, data) {
     ].join('');
   }
 
+
+  //INICIO ENCONTRAR RUTA
  function routButoon(){
-  var routingParameters = {
-    // The routing mode:
+   //-33.362357, -70.726141   cementerio -33.414625,-70.649315
+  var routingParameters = {   
+// El modo de enrutamiento:
     'mode': 'fastest;car',
     // punto de inicio
     'waypoint0': 'geo!-33.595715,-70.585197',
     // punto de llegada
-    'waypoint1': 'geo!-33.414625,-70.649315',
-    // To retrieve the shape of the route we choose the route
-    // representation mode 'display'
+    'waypoint1': 'geo!-33.362357,-70.726141',
+  
+// Para recuperar la forma de la ruta elegimos la ruta
+    // modo de representación 'display'
     'representation': 'display',
     'trafficMode':'enabled'
   };
   
-  // Define a callback function to process the routing response:
+// Definir una función de devolución de llamada para procesar la respuesta de enrutamiento:
   var onResult = function(result) {
     console.log(result);
     var route,
@@ -215,51 +213,52 @@ function startClustering(map, ui, getBubbleContent, data) {
       endPoint,
       linestring;
     if(result.response.route) {
-    // Pick the first route from the response:
+    
+// Escoge la primera ruta de la respuesta
     route = result.response.route[0];
-    // Pick the route's shape:
+  // Escoge la forma de la ruta:
     routeShape = route.shape;
   
-    // Create a linestring to use as a point source for the route line
-    linestring = new H.geo.LineString();
-  
-    // Push all the points in the shape into the linestring:
+    
+// Crear una serie lineal para usar como fuente puntual para la línea de ruta
+    linestring = new H.geo.LineString(); 
+    
+// Empuje todos los puntos en la forma en la cadena lineal:
     routeShape.forEach(function(point) {
       var parts = point.split(',');
       linestring.pushLatLngAlt(parts[0], parts[1]);
     });
   
-    // Retrieve the mapped positions of the requested waypoints:
+// Recuperar las posiciones mapeadas de los puntos de ruta solicitados:
     startPoint = route.waypoint[0].mappedPosition;
     endPoint = route.waypoint[1].mappedPosition;
   
-    // Create a polyline to display the route:
+    
+// Crear una polilínea para mostrar la ruta:
     var routeLine = new H.map.Polyline(linestring, {
       style: {lineWidth: 8 },
       arrows: { fillColor: 'white', frequency: 4, width: 0.8, length: 0.7 }
     });
-  
-    // Create a marker for the start point:
+   
+// Crear un marcador para el punto de inicio:
     var startMarker = new H.map.Marker({
       lat: startPoint.latitude,
       lng: startPoint.longitude
     });
   
-    // Create a marker for the end point:
+// Crear un marcador para el punto final:
     var endMarker = new H.map.Marker({
       lat: endPoint.latitude,
       lng: endPoint.longitude
     });
   
-    // Add the route polyline and the two markers to the map:
-    map.addObjects([routeLine, startMarker, endMarker]);
+// Añadir la polilínea de la ruta y los dos marcadores al mapa:
+    map.addObjects([routeLine, startMarker, endMarker]); 
   
-    // Set the map's viewport to make the whole route visible:
+// Establezca la ventana gráfica del mapa para que toda la ruta sea visible:
     map.setViewBounds(routeLine.getBounds());
     }
   };
-  
-  
 // Obtener una instancia del servicio de enrutamiento:
   var router = platform.getRoutingService();
   
@@ -271,14 +270,13 @@ function startClustering(map, ui, getBubbleContent, data) {
       alert(error.message);
     });
  }
- 
+ //FIN ENCONTRAR RUTA
+
 // Paso 5: Solicitar datos que se visualizarán en un mapa.
-  //
   // Para mayor comodidad, hemos incluido la biblioteca jQuery para hacer una llamada AJAX para hacer esto.
   // Para obtener más información, consulte: http://api.jquery.com/jQuery.getJSON/
-  //
   // La biblioteca jQuery está disponible bajo una licencia MIT https://jquery.org/license/
-  //
+
   function loadPoint(){
     jQuery.getJSON("data/pointJson.json", function (data) {
       startClustering(map, ui, getBubbleContent, data);

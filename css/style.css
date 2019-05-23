@@ -1,13 +1,17 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
+.row{
+    margin-right: 0; 
+    margin-left: 0; 
+}
 /* sección splash */
 
 /* #splash{
     display: none; */
 
 .background-body{
-  background-color:#E70CA9;
+  background-color: #F3F0DF;
   
 }
 .minh-100{
@@ -38,43 +42,45 @@ h3{
 }
 
 /* sección login */
-#loggin {
-    min-height: 100vh;
-}
 
 .texto-login{
-    font-weight: bold;
+    
     color: #505050;
-    padding-top: 50px; 
+    padding-top: 20px; 
     font-size: 20px;
-}
-
-.btn-iniciar{
-    width: 307px;
-    height: 48px;
-    background: #0036E4;
-    border-radius: 60px;
-    color: white;
 }
 
 .btn-registrar{
     width: 307px;
     height: 48px;
-    border: 1px solid #969696;
+    background: #67377D;
     border-radius: 60px;
-    background: white;
+    color: white;
 }
-#loggin form input {
-    width: 400px;
+
+.btn-iniciar{
+    width: 307px;
     height: 48px;
     border-radius: 60px;
+    background:#F3F0DF;
+    color:#67377D;
+    border: 1px solid #67377D;
+    font-weight: 600!important;
+    
 }
+
 .texto-pequeno{
     font-size: 18px!important;
     text-decoration: underline;
 }
 
-.mostrar-logos{
+#sesion input {
+    height: 48px;
+    background-color: transparent;
+    border: 1px solid #67377D;
+}
+
+/* .mostrar-logos{
     display: none;
 }
 
@@ -106,12 +112,9 @@ h3{
     background: none;
     border: 0;
      color: inherit;
-     /* cursor: default; */
+
      font: inherit;
      line-height: normal;
-}
-
-
 
 .azul-facebook{
     background-color: #3b5998;
@@ -122,7 +125,42 @@ h3{
 }
 .rojo-googlemas{
     background-color: #ea4335;
+} */
+
+/* Navbar */
+
+/* #nav{
+    display:none;
+} */
+
+.bottom{
+  box-shadow: 5px 3px 15px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 72px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  position: relative;
 }
+#nav img {
+    width: 70px;
+}
+
+/* sección activar ubicación */
+#activarUbicacion{
+    position: relative;
+}
+
+.mensajes{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color:#353535;
+}
+
 
 #mapa{
     display: none;

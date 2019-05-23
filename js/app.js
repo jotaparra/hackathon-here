@@ -1,9 +1,3 @@
-const showRrss = document.getElementById("showRrss");
-
-showRrss.addEventListener("click", () => {
-  document.getElementsByClassName("mostrar-logos")[0].classList.remove("mostrar-logos");
-})
-
 
 //HACIA ABAJO CODIGO DE MARCELA
 /**

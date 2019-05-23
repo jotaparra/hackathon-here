@@ -65,7 +65,7 @@
     </style>
 </head>
 
-<body onload="showMarker()">
+<body>
 
     <!----- SECCION SPLASH ------>
     <section id='splash' class="background-body">
@@ -176,64 +176,54 @@
 
     <!-- SECCION NAV -->
     <section id="activarUbicacion">
-            <div class="row minh-100">
-                <div class="col-12">
-                    <img src="img/captura_mapa.png" alt="mapa">
-                    <div class="text-center">
-                        <p class="pt-4 mensajes">LLegó el momento de empezar <br>a explotar los puntos con historia!</p>
-                    </div>
+        <div class="row minh-100">
+            <div class="col-12">
+                <img src="img/captura_mapa.png" alt="mapa">
+                <div class="text-center">
+                    <p class="pt-4 mensajes">LLegó el momento de empezar <br>a explotar los puntos con historia!</p>
                 </div>
-    
             </div>
-        </section>
 
-        <section id="filtrarComuna">
-                <div class="row minh-100">
-                    <div class="col-12">
-                        <img src="img/captura_mapa.png" alt="mapa">
-                        <div class="text-center">
-                            <p class="pt-4 mensajes">LLegó el momento de empezar <br>a explotar los puntos con historia!</p>
-                        </div>
-                    </div>
+        </div>
+    </section>
+
+    <section id="filtrarComuna">
+        <div class="row minh-100">
+            <div class="col-12">
+                <img src="img/captura_mapa.png" alt="mapa">
+                <div class="text-center">
+                    <p class="pt-4 mensajes">LLegó el momento de empezar <br>a explotar los puntos con historia!</p>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-        <ul class="nav col-12 bottom fixed-bottom justify-content-around pt-2">
-            <li class="nav-item">
-                <a href="#"><img src="./img/icono-home-gris.png" alt=""></a>
-            </li>
-            <li class="nav-item">
-                <a href="#"><img src="./img/icono-curiosidades.png" alt=""></a>
-            </li>
-            <li class="nav-item">
-                <a href="#"><img src="./img/icono-premios.png" alt=""></a>
-            </li>
-            <li class="nav-item">
-                <a href="#"><img src="./img/icono-perfil.png" alt=""></a>
-            </li>
-        </ul>
-    
+    <ul class="nav col-12 bottom fixed-bottom justify-content-around pt-2">
+        <li class="nav-item">
+            <a href="#"><img src="./img/icono-home-gris.png" alt=""></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="./img/icono-curiosidades.png" alt=""></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="./img/icono-premios.png" alt=""></a>
+        </li>
+        <li class="nav-item">
+            <a href="#"><img src="./img/icono-perfil.png" alt=""></a>
+        </li>
+    </ul>
+
 
     <!-- SECCION ACTIVAR UBICACION-->
 
-    <section id='mapa'>
-
-        <!-- <body onload="showMarker()"> -->
+    <section id='mapa' onload="showMarker()">
         <h1>RECORRIDO CULTURAL QCTG</h1>
         <p>Los lugares culturales de Santiago a la palma de tu mano</p>
-        <div id="map" style="width: 600px; height: 400px; background: grey"></div>
-        <p></p>
+        <div id="map" style="width: 1000px; height: 400px; background: grey"></div>
         <button onclick="routButoon()">Trazar ruta</button>
+
+      
     </section>
-
-
-
-<body onload="showMarker()">
-    <h1>RECORRIDO CULTURAL QCTG</h1>
-    <p>Los lugares culturales de Santiago a la palma de tu mano</p>
-    <div id="map" style="width: 1000px; height: 400px; background: grey"></div>
-    <button onclick="routButoon()">Trazar ruta</button>
-
     <script type="text/javascript" src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

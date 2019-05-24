@@ -1,0 +1,86 @@
+[
+    { "thumbnail":"https://historiasylugares.files.wordpress.com/2012/04/dsc06587.jpg",
+        "width":200,
+        "height":200,
+        "title":"La llorona",
+        "license":null,
+        "latitude":	-33.413527,
+        "longitude": -70.648492,
+        "fullurl":"https://historiasylugares.files.wordpress.com/2012/04/dsc06587.jpg",
+        "texto":"Mujer que perdió a sus hijos en un accidente, producto de éste quedó en estado de coma por dos años, al cabo de este tiempo, despertó y preguntó por sus hijos, sin embargo, en un inicio nadie se atrevió a decirle lo que había pasado con ellos, hasta que un día decidieron contarle la verdad. De este modo, ella en un arranque de desperación, fue hasta el Cementerio General – donde estaban sepultados sus hijos – y emprendió la búsqueda de las tumbas, pero como no las encontró, decidió ahorcarse.",
+        "id":1   
+    },
+    
+    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Animita_de_Carmencita_Cañas_-_2016-03-16_12.28.01.jpg/800px-Animita_de_Carmencita_Cañas_-_2016-03-16_12.28.01.jpg",
+        "width":200,
+        "height":200,
+        "title":"Carmencita",
+        "license":null,
+        "latitude":	-33.413727,
+        "longitude": -70.648492,
+        "fullurl":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Animita_de_Carmencita_Cañas_-_2016-03-16_12.28.01.jpg/800px-Animita_de_Carmencita_Cañas_-_2016-03-16_12.28.01.jpg",
+        "texto":"La animita de Carmencita corresponde a la tumba de Margarita del Carmen Cañas en el Cementerio General de Santiago de Chile, la cual se convirtió en un lugar sagrado o animita donde los deudo van a pedirle favores y ponen una placa cuando les es concedida. La tumba esta ubicada en calle Lircay del camposanto a poca distancia del acceso de calle Recoleta y de la Estación Cementerios del Metro de Santiago. Está continuamente con flores y con más de 70 lápidas que le agradecen sus “milagros",
+        "id":2
+    },
+
+    { "thumbnail": "https://media-cdn.tripadvisor.com/media/photo-s/06/71/53/39/general-cemetery-cementerio.jpg",
+        "width":200,
+        "height":200,
+        "title":"La chascona",
+        "license":null,
+        "latitude":	-33.412997,
+        "longitude": -70.650149,
+        "fullurl":"https://media-cdn.tripadvisor.com/media/photo-s/06/71/53/39/general-cemetery-cementerio.jpg",
+        "texto":"Se trata de una mujer que está de luto y que se pasea con un ramo de flores en las manos. Esta alma en pena se le bautizó como “chascona” por su parecido con una estatua de una mujer que hay en el cementerio y cuyo rostro es tapado por mechones de su cabello. Se dice que cuando esta mujer aparece, la estatua recién mencionada no se encuentra en su lugar.",
+        "id":3
+    },
+
+    {  "thumbnail": "https://mapio.net/images-p/3513021.jpg",
+        "width":200,
+        "height":200,
+        "title":"La novia embalsamada",
+        "license":null,
+        "latitude":	-33.413867,
+        "longitude": -70.647946,
+        "fullurl":"https://mapio.net/images-p/3513021.jpg",
+        "texto":"Orlita falleció un 13 de abril de 1943, el día de su cumpleaños número 17, de un ataque al corazón. Su madre, muy afectada por su pérdida, la mandó embalsamar para conservar su belleza y la vistió de blanco como símbolo de pureza.La desconsolada madre todos los domingos iba a peinar el cabello de la difunta; con el paso del tiempo, su imagen se ha deteriorado. En la actualidad se encuentra en una tumba sellada, y su madre hace años que ya falleció.",
+        "id":4
+    },
+
+    { "thumbnail":"https://www.recoleta.cl/wp-content/uploads/2018/03/IMG_0461-630x300.jpg",
+        "width":200,
+        "height":200,
+        "title":"Violeta Parra",
+        "license":null,
+        "latitude":	-33.410413,
+        "longitude": -70.652948,
+        "fullurl":"https://www.recoleta.cl/wp-content/uploads/2018/03/IMG_0461-630x300.jpg",        
+        "texto":"Violeta del Carmen Parra Sandoval (San Fabián de Alico1 o San Carlos,2 4 de octubre de 1917-Santiago de Chile, 5 de febrero de 1967)34 fue una cantautora, pintora, escultora, bordadora y ceramista chilena, considerada una de las principales folcloristas en América del Sur y divulgadora de la música popular.",
+        "id":5    
+    },
+        
+        { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/e/e8/Tumba_de_Manuel_Rodriguez.jpg",
+            "width":200,
+            "height":200,
+            "title":"Manuel Rodriguez",
+            "license":null,
+            "latitude":	-33.414312,
+            "longitude": -70.651080,
+            "fullurl":"https://upload.wikimedia.org/wikipedia/commons/e/e8/Tumba_de_Manuel_Rodriguez.jpg",        
+            "texto":"Manuel Javier Rodríguez y Erdoíza (Santiago, 27 de febrerode 1785-Tiltil, 26 de mayo de 1818) fue un patriota chileno que realizó innumerables acciones en diferentes cargos para lograr la independencia de Chile, como abogado, político, guerrillero y con el gradomilitar de Coronel, siendo reconocido como uno de los padres de la Patria de Chile.",
+            "id":6
+        },
+        
+        { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/f/f8/TumbaBello.JPG",
+            "width":200,
+            "height":200,
+            "title":"Andres Bello",
+            "license":null,
+            "latitude":	-33.416703,
+            "longitude": -70.648215,
+            "fullurl":"https://upload.wikimedia.org/wikipedia/commons/f/f8/TumbaBello.JPG",        
+            "texto":"Andrés de Jesús María y José Bello López (Caracas, 29 de noviembre de 1781-Santiago, 15 de octubre de 1865) fue un polímatavenezolano-chileno, quien fue a la vez filósofo, poeta, traductor, filólogo, ensayista, educador, político y diplomático. Considerado como uno de los humanistas más importantes de América, realizó contribuciones en innumerables campos del conocimiento",
+            "id":7  
+        }
+
+]

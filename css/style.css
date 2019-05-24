@@ -1,10 +1,7 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
-.row{
-    margin-right: 0; 
-    margin-left: 0; 
-}
+
 /* sección splash */
 
 /* #splash{
@@ -210,3 +207,9 @@ line-height: 19px;
     display: none;
 }
 
+
+/* card tesoro ganado */
+.explora{
+    font-size: 14px;
+    color: #545454;
+}

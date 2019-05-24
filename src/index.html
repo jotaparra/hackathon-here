@@ -65,10 +65,10 @@
     </style>
 </head>
 
-<body>
+<body onload="init()">
 
     <!----- SECCION SPLASH ------>
-    <section id='splash' class="background-body">
+    <section id='splash' class="background-body" style="display: block">
         <div class="row minh-100">
             <div class="col-12 text-center align-self-center">
                 <img src="./img/logo-splash.png" alt="logo explora cultura">
@@ -78,7 +78,7 @@
     </section>
 
     <!----- SECCION LOGGIN ------>
-    <section id="loggin" class="minh-100 background-body">
+    <section id="loggin" class="minh-100 background-body" style="display: block">
         <div class="row">
             <div class="col-12 text-center mt-3">
                 <img src="img/logotipo.png" alt="logo explora">
@@ -88,8 +88,8 @@
             </div>
             <form class="col-12 col-md-4 offset-md-4 text-center" action="javascript:void(0)">
 
-                <button type='button' class="text-center col-10 mt-1 btn-registrar" id="registrar">Registrarme</button>
-                <button type='button' class="text-center col-10 mt-3 btn-iniciar" id="iniciarSesion">Ya tengo una
+                <button type="button" class="text-center col-10 mt-1 btn-registrar" id="registrar">Registrarme</button>
+                <button type="button" class="text-center col-10 mt-3 btn-iniciar" id="singIn">Ya tengo una
                     cuenta</button>
             </form>
         </div>
@@ -97,7 +97,7 @@
     </section>
 
     <!----- SECCIÓN INICIAR SESION ------>
-    <section id="sesion" class="background-body">
+    <section id="sesion" class="background-body" style="display: none">
         <div class="row minh-100">
             <div class="col-12 text-center mt-3">
                 <img src="img/logotipo.png" alt="logo explora">
@@ -106,14 +106,14 @@
 
                 <input class="col-10" id="" type="email" placeholder="Email usuario">
                 <input class="col-10 mt-3" id="" type="password" placeholder="Contraseña">
-                <button type='button' class="text-center col-10 mt-4 btn-registrar" id="">Iniciar sesión</button>
+                <button type="button" class="text-center col-10 mt-4 btn-registrar" id="loginU">Iniciar sesión</button>
             </form>
         </div>
     </section>
 
     <!-- ACTIVAR UBICACION -->
 
-    <section id="activarUbicacion">
+    <section id="activarUbicacion" style="display: none">
         <div class="row minh-100">
             <div class="col-12">
                 <img src="img/captura_mapa.png" alt="mapa">
@@ -126,7 +126,7 @@
     </section>
 
     <!-- FILTRAR COMUNA -->
-    <section id="filtrarComuna">
+    <section id="filtrarComuna" style="display: none">
         <div class="row minh-100">
             <div class="col-12">
                 <img src="img/captura_mapa.png" alt="mapa">
@@ -136,10 +136,16 @@
             </div>
         </div>
     </section>
+   <!-- SECCION ACTIVAR UBICACION-->
 
+
+    <h1>RECORRIDO CULTURAL QCTG</h1>
+    <p>Los lugares culturales de Santiago a la palma de tu mano</p>
+    <div id="map" style="width: 100%; height: 500px; background: grey;" >
+    </div>
     <!-- SECCION POSTAL -->
 
-    <div id="card" class="row minh-100 justify-content-center">
+    <div id="card" class="row minh-100 justify-content-center" style="display: none">
         <div class="col-10 mt-3 col-md-4 postal text-center">
             <p class="titulo-postal pt-3"><span class="morado">Barrio Recoleta</span><br>
                 Cementerio general
@@ -171,14 +177,14 @@
                 <img src="./img/banos.png" alt="">
             </div>
             <div>
-                <button type='button' class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">¿Cómo llegar?</button>
+                <button type="button" class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">¿Cómo llegar?</button>
             </div>
         </div>
     </div>
 
     <!-- SECCION GANASTE -->
 
-    <div id="ganaste" class="row minh-100 justify-content-center">
+    <div id="ganaste" class="row minh-100 justify-content-center" style="display: none">
         <div class="col-10 mt-3 col-md-4 postal text-center">
             <p class="mensajes pt-3 pb-0 mb-0">Llegaste al punto:
                 <h3> Cementerio general </h3>
@@ -193,28 +199,28 @@
                 <img src="./img/banos.png" alt="">
             </div>
             <div>
-                <button type='button' class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">Siguiente</button>
+                <button type="button" class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">Siguiente</button>
             </div>
         </div>
     </div>
 
     <!-- SECCION TESORO -->
 
-    <div id="tesoro" class="row minh-100 justify-content-center">
+    <div id="tesoro" class="row minh-100 justify-content-center" style="display: none">
         <div class="col-10 mt-3 col-md-4 postal text-center">
             <p class="mensajes py-3 pb-0 mb-0">Ingresa al punto y descubre los <br> tesoros ocultos </p>
             <img src="./img/cofre.png" alt="imagen ejemplo">
             <p class="mensajes pt-3 pb-0 mb-0">¡Por cada uno de estos lugares recibirás un cofre!</p>
             <div>
-                <button type='button' class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">Explorar</button>
-                <button type='button' class="text-center col-10 mt-3 btn-iniciar" id="iniciarSesion">Ahora no</button>
+                <button type="button" class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">Explorar</button>
+                <button type="button" class="text-center col-10 mt-3 btn-iniciar" id="iniciarSesion">Ahora no</button>
             </div>
         </div>
     </div>
 
     <!-- SECCION LEYENDA -->
 
-    <div id="leyenda" class="row minh-100 justify-content-center">
+    <div id="leyenda" class="row minh-100 justify-content-center" style="display: none">
         <div class="col-10 mt-3 col-md-4 postal text-center">
             <p class="mensajes pt-3 pb-1 pb-0 mb-0 text-left">La llorona</p>
             <img src="./img/llorona.png" alt="imagen ejemplo">
@@ -226,7 +232,7 @@
                 donde estaban sepultados sus hijos – y emprendió la búsqueda de las tumbas, pero como no las encontró,
                 decidió ahorcarse.</p>
             <div>
-                <button type='button' class="text-center col-10 mt-1 btn-registrar" id="comoLlegar">volver al mapa</button>
+                <button type="button" class="text-center col-10 mt-1 btn-registrar" id="comoLlegar">volver al mapa</button>
             </div>
         </div>
     </div>
@@ -234,7 +240,7 @@
 
     <!-- SECCION TESORO GANADO -->
 
-    <div id="tesoro" class="row minh-100 justify-content-center">
+    <div id="tesoro" class="row minh-100 justify-content-center" style="display: none">
         <div class="col-10 mt-3 col-md-4 postal text-center">
             <p class="mensajes py-3 pb-0 mb-0">¡Felicidades, Conseguiste tu <br> primer cofre!</p>
             <img class="pt-3" src="./img/cofre.png" alt="imagen ejemplo">
@@ -248,20 +254,20 @@
 
     <!-- SECCION GANAR RANGO -->
 
-    <div id="rango" class="row minh-100 justify-content-center">
+    <div id="rango" class="row minh-100 justify-content-center" style="display: none">
         <div class="col-10 mt-3 col-md-4 postal text-center">
             <p class="mensajes py-3 pb-0 mb-0">¡Felicidades, eres oficialmente!<br>una exploradora!</p>
             <img class="pt-3" src="./img/binoculares.png" alt="imagen ejemplo">
             <p class="explora pt-3 pb-0 mb-0">Explora los demás puntos y sigue ganando premios</p>
             <div class="pt-3">
-                <button type='button' class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">Genial</button>
+                <button type="button" class="text-center col-10 mt-3 btn-registrar" id="comoLlegar">Genial</button>
             </div>
         </div>
     </div>
 
     <!-- SECCION POSTALES  -->
 
-    <div id="postales" class="row minh-100">
+    <div id="postales" class="row minh-100" style="display: none">
         <div class="col-10 mt-3 col-md-4 py-0">
 
             <img src="./img/postales.png" alt="imagen ejemplo">
@@ -271,7 +277,7 @@
 
     <!-- SECCION PERFIL - MI VIAJE  -->
 
-    <div id="miViaje" class="row minh-100 my-0">
+    <div id="miViaje" class="row minh-100 my-0" style="display: none">
         <div class="col-10 mt-3 col-md-4 my-0">
             <img src="./img/perfil-viaje.png" alt="imagen ejemplo">
         </div>
@@ -279,7 +285,7 @@
 
 
      <!-- SECCION PERFIL - MIS AMIGOS  -->
-     <div id="misAmigos" class="row minh-100 my-0">
+     <div id="misAmigos" class="row minh-100 my-0" style="display: none">
             <div class="col-10 mt-3 col-md-4 my-0">
                 <img src="./img/mis-amigos.png" alt="imagen ejemplo">
             </div>
@@ -287,14 +293,14 @@
 
 
 
-     <div id="miViaje" class="row minh-100 my-0">
+     <div id="miViaje" class="row minh-100 my-0" style="display: none">
             <div class="col-10 mt-3 col-md-4 my-0">
                 <img src="./img/perfil-viaje.png" alt="imagen ejemplo">
             </div>
         </div>
 
     <!-- NAVEGACION BOTTOM -->
-    <ul class="nav col-12 bottom fixed-bottom justify-content-around pt-2">
+    <ul class="nav col-12 bottom fixed-bottom justify-content-around pt-2" style="display: none">
         <li class="nav-item">
             <a href="#"><img src="./img/icono-home-gris.png" alt=""></a>
         </li>
@@ -310,21 +316,11 @@
     </ul>
 
 
-    <!-- SECCION ACTIVAR UBICACION-->
-
-    <section id='mapa' onload="showMarker()" class="row minh-100">
-        <h1>RECORRIDO CULTURAL QCTG</h1>
-        <p>Los lugares culturales de Santiago a la palma de tu mano</p>
-        <div id="map" style="width: 1000px; height: 400px; background: grey"></div>
-        <button onclick="routButoon()">Trazar ruta</button>
-    </section>
-
-
-
+ 
 
     <script type="text/javascript" src="js/app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"

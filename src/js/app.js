@@ -1,4 +1,5 @@
 
+
 //HACIA ABAJO CODIGO DE MARCELA
 /**
 * Hacer agrupación de marcadores con un tema personalizado.
@@ -74,6 +75,7 @@ function startClustering(map, ui, getBubbleContent, data) {
    * @this {H.map.Marker}
    */
   function onMarkerClick() {
+   
     var position = this.getPosition(),
       data = this.getData(),
       bubbleContent = getBubbleContent(data),
@@ -129,17 +131,37 @@ function startClustering(map, ui, getBubbleContent, data) {
     var y = Math.sin(time) * radius;
     return {lat:window.lat + y, lng:window.lng + x};
   };
+function init(){
+  document.getElementById("splash").style.display="Block";
+  setTimeout(() => {
+    document.getElementById("splash").style.display="none";
+    
+  }, 3000);
+  setTimeout(() => {
+  
+    document.getElementById("loggin").style.display="block";
+  }, 3000);
+  showMarker();
 
+}
+document.getElementById("loginU").addEventListener("click",hideLogin);
+function hideLogin(){
+  document.getElementById("sesion").style.display="none";
+}
+  document.getElementById("singIn").addEventListener("click",showPage);
+  function showPage(){
+    document.getElementById("loggin").style.display="none";
+    document.getElementById("sesion").style.display="block";
+    showMarker();
+  }
   function showMarker(){
     navigator.geolocation.getCurrentPosition(showPosition);
     loadPoint();
- setInterval(function(){navigator.geolocation.getCurrentPosition(showPosition);},3000);
-
+    setInterval(function(){navigator.geolocation.getCurrentPosition(showPosition);},3000);
   }
   var marker=0;
   var markerAnt=0;
   function showPosition(position){
-   
    var icon= new H.map.Icon("./img/icon.gif", {
       size: {w: 20, h: 20},
       anchor: {x: 10, y: 10}
@@ -161,28 +183,79 @@ function startClustering(map, ui, getBubbleContent, data) {
      markerAnt=marker;
    }
   }
-    
+  let resp=1;
   function getBubbleContent(data) {
-    return [
-      '<div class="bubble">',
-        '<a class="bubble-image" ',
-          'style="background-image: url(', data.fullurl, ')" ',
-          'href="', data.url, '" target="_blank">',
-        '</a>',
-        '<span>',
-          '<a class="bubble-footer" href="//commons.wikimedia.org/" target="_blank">',
-            '<span class="bubble-desc">',
-            data.title+ ":" +" "+ data.texto,
-            '</span>',
-          '</a>',
-        '</span>',
-      '</div>'
-    ].join('');
+    
+    //preguntar si la ubicacion es cercana o lejana y dibujar un tipo u otro de card
+    if(resp===1){
+      return [
+        '<div id="card" class="row minh-100 justify-content-center">',
+        '<div class="col-10 mt-3 col-md-4 postal text-center">',
+            '<p class="titulo-postal pt-3"><span class="morado">Barrio Recoleta</span><br>',
+                'Cementerio general',
+            '</p>',
+           '<img class="img-postal" src="./img/imagen-ejemplo.png" alt="imagen ejemplo">',
+            '<div class="row pt-2">',
+                '<div class="col-5 offset-1">',
+                    '<p class="subtitulo-postal">',
+                        'Horario',
+                    '</p>',
+                    '<p class="texto-postal">',
+                        'Lunes a domingo',
+                        '9:00 a 17:30 hrs.',
+                    '</p>',
+                '</div>',
+                '<div class="col-6">',
+                    '<p class="subtitulo-postal">',
+                        'Dirección',
+                    '</p>',
+                    '<p class="texto-postal">',
+                        'Prof. Zañartu 951,',
+                        'Recoleta, Santiago',
+                    '</p>',
+                '</div>',
+            '</div>',
+            '<div class="box-iconos pt-3">',
+                '<img src="./img/accesibilidad.png" alt="">',
+                '<img src="./img/gratis.png" alt="">',
+                '<img src="./img/banos.png" alt="">',
+            '</div>',
+            '<div>',
+                '<button type="button" class="text-center col-10 mt-3 btn-registrar" id="comoLlegar" onclick="routButoon()">¿Cómo llegar?</button>',
+            '</div>',
+        '</div>',
+    '</div>',
+      ].join('');
+    }
+    else{
+      return [
+        '<div id="ganaste" class="row minh-100 justify-content-center">',
+        '<div class="col-10 mt-3 col-md-4 postal text-center">',
+            '<p class="mensajes pt-3 pb-0 mb-0">Llegaste al punto:',
+                '<h3> Cementerio general </h3>',
+            '</p>',
+            '<img src="./img/trofeo.png" alt="imagen ejemplo">',
+           '<p class="mensajes pt-3 pb-0 mb-0">¡Ganaste tu primera medalla!</p>',
+            '<p class="miniatura pt-2">El cementerio general fuen fundado 9 de diciembre de 1821, <span class="bold">¡ya',
+                    'tiene 197 años!</span></p>',
+            '<div class="box-iconos pt-1">',
+                '<img src="./img/accesibilidad.png" alt="">',
+                '<img src="./img/gratis.png" alt="">',
+                '<img src="./img/banos.png" alt="">',
+            '</div>',
+            '<div>',
+                '<button type="button" class="text-center col-10 mt-3 btn-registrar" id="explorar">Explorar</button>',
+            '</div>',
+        '</div>',
+    '</div>',
+      ].join('');
+    }
   }
 
 
   //INICIO ENCONTRAR RUTA
  function routButoon(){
+  resp=2;
    //-33.362357, -70.726141   cementerio -33.414625,-70.649315
   var routingParameters = {   
 // El modo de enrutamiento:
@@ -272,7 +345,9 @@ function startClustering(map, ui, getBubbleContent, data) {
   // La biblioteca jQuery está disponible bajo una licencia MIT https://jquery.org/license/
 
   function loadPoint(){
-    jQuery.getJSON("data/pointJson.json", function (data) {
+    console.log("leyebdo puntos");
+    $.getJSON("data/pointJson.json", function (data) {
       startClustering(map, ui, getBubbleContent, data);
     });
   }
+  

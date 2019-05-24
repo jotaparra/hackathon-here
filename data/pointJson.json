@@ -1,4 +1,4 @@
-[{ "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/La_Moneda_vista_desde_Plaza_de_la_Constituci%C3%B3n.jpg/410px-La_Moneda_vista_desde_Plaza_de_la_Constituci%C3%B3n.jpg",
+[{ "thumbnail":"./img/icono-market.png",
     "width":200,
     "height":200,
     "title":"La Moneda",
@@ -16,7 +16,7 @@
     "id":1
     },
     
-    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/8/86/Cementerio_General._Acceso_por_Avenida_La_paz..JPG",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Cementerio General",
@@ -34,7 +34,7 @@
         "id":2  
     },
 
-    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/3/37/Cementerio_Cat%C3%B3lico.jpg",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Cementerio Católico",
@@ -52,7 +52,7 @@
         "id":3    
         },
     
-    { "thumbnail":"https://commons.wikimedia.org/wiki/File:Capilla_La_Vi%C3%B1ita.JPG",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Iglesia La Viñita",
@@ -70,7 +70,7 @@
         "id":4    
         },
     
-    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/8/82/Plazoleta_de_piedras_tacitas.JPG",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Plazoleta Piedras Tacitas",
@@ -88,7 +88,7 @@
         "id":5    
         },
 
-    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/c/c5/Iglesia_de_la_Recoleta_Dominica_II.JPG",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Iglesia de la Recoleta Domínica",
@@ -106,7 +106,7 @@
         "id":6    
         },
     
-    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/b/b9/La_Vega_Central_%2815747341503%29.jpg",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"La Vega",
@@ -124,7 +124,7 @@
         "id":7
         },
 
-    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/b/b9/Explanada_P%C3%A9rgola_de_San_Francisco_1.jpg",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Pérgola de las Flores Santa María",
@@ -142,7 +142,7 @@
         "id":8
         },
 
-    { "thumbnail":"https://www.monumentos.gob.cl/sites/default/files/styles/slide_monumentos/public/image-monumentos/dsc00576.jpg?itok=WBA6svRF",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Teatro Grez y Lavandería del Instituto Psiquiátrico Dr. José Horwitz",
@@ -160,7 +160,7 @@
         "id":9
         },
     
-    { "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/7/7d/25-09-2013_Parque_Cerro_Blanco_2.jpg",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Cerro Blanco",
@@ -178,7 +178,7 @@
         "id":10
         },
     
-    { "thumbnail":"https://www.registromuseoschile.cl/663/articles-50668_imagen_09.jpg",
+    { "thumbnail":"./img/icono-market.png",
         "width":200,
         "height":200,
         "title":"Museo Histórico Domínico",

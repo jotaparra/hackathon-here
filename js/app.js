@@ -185,7 +185,6 @@ function hideLogin(){
   }
   let resp=1;
   function getBubbleContent(data) {
-    console.log(data.accesibilidad);
     //preguntar si la ubicacion es cercana o lejana y dibujar un tipo u otro de card
     if(resp===1){
       return [
@@ -211,29 +210,15 @@ function hideLogin(){
     }
     else{
       return [
-        '<div id="ganaste" class="row minh-100 justify-content-center">',
-        '<div class="col-10 mt-3 col-md-4 postal text-center">',
-            '<p class="mensajes pt-3 pb-0 mb-0">Llegaste al punto:',
-                '<h3> Cementerio general </h3>',
-            '</p>',
-            '<img src="./img/trofeo.png" alt="imagen ejemplo">',
-           '<p class="mensajes pt-3 pb-0 mb-0">¡Ganaste tu primera medalla!</p>',
-            '<p class="miniatura pt-2">El cementerio general fuen fundado 9 de diciembre de 1821, <span class="bold">¡ya',
-                    'tiene 197 años!</span></p>',
-            '<div class="box-iconos pt-1">',
-                '<img src="./img/accesibilidad.png" alt="">',
-                '<img src="./img/gratis.png" alt="">',
-                '<img src="./img/banos.png" alt="">',
-            '</div>',
+        '<div class="bubble">',
+        '<img src="img/cementerio2.png" class="imgPremio"></img>',
             '<div>',
-                '<button type="button" class="text-center col-10 mt-3 btn-registrar" id="explorar">Explorar</button>',
+                '<button type="button" class="text-center col-10 mt-3 btn-registrar" onclick="pointDemo()" id="explorar">Explorar</button>',
             '</div>',
-        '</div>',
     '</div>',
       ].join('');
     }
   }
-
 
   //INICIO ENCONTRAR RUTA
  function routButoon(){
@@ -243,9 +228,9 @@ function hideLogin(){
 // El modo de enrutamiento:
     'mode': 'fastest;car',
     // punto de inicio
-    'waypoint0': 'geo!-33.595715,-70.585197',
+    'waypoint0': 'geo!-33.419099,-70.641914',
     // punto de llegada
-    'waypoint1': 'geo!-33.362357,-70.726141',
+    'waypoint1': 'geo!-33.413896,-70.643845',
   
 // Para recuperar la forma de la ruta elegimos la ruta
     // modo de representación 'display'
@@ -255,7 +240,6 @@ function hideLogin(){
   
 // Definir una función de devolución de llamada para procesar la respuesta de enrutamiento:
   var onResult = function(result) {
-    console.log(result);
     var route,
       routeShape,
       startPoint,
@@ -327,10 +311,57 @@ function hideLogin(){
   // La biblioteca jQuery está disponible bajo una licencia MIT https://jquery.org/license/
 
   function loadPoint(){
-    console.log("leyebdo puntos");
     $.getJSON("data/pointJson.json", function (data) {
-      console.log(data);
       startClustering(map, ui, getBubbleContent, data);
     });
   }
+  
+
+
+
+  // nuevos modales
+  function addMarkerToGroup(group, coordinate, html) {
+    var marker = new H.map.Marker(coordinate);
+    // add custom data to the marker
+    marker.setData(html);
+    group.addObject(marker);
+  }
+
+  function addInfoBubble(map) {
+    var group = new H.map.Group();
+  
+    map.addObject(group);
+  
+    // add 'tap' event listener, that opens info bubble, to the group
+    group.addEventListener('tap', function (evt) {
+      // event target is the marker itself, group is a parent event target
+      // for all objects that it contains
+      var bubble =  new H.ui.InfoBubble(evt.target.getPosition(), {
+        // read custom data
+        content: evt.target.getData()
+      });
+      // show info bubble
+      ui.addBubble(bubble);
+    }, false);
+    $.getJSON("data/pointDemo.json", function (data) {
+      data.forEach(findData);
+      function findData(item){
+        console.log(item);  
+        addMarkerToGroup(group, {lat: item.latitude , lng:item.longitude},
+          '<div><p>'+item.title+'</p>'+
+          '<p>'+item.texto+'</p>'+
+          '<a class="bubble-image" ',
+          'style="background-image: url(', item.thumbnail, ')" ',
+          'href="', item.fullurl, '" target="_blank">',
+          '</div>');
+      }
+    });
+  }
+  function pointDemo(){
+    addInfoBubble(map);
+    //leemos los puntos del mapa
+   
+  }
+
+
   

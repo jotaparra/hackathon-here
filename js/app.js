@@ -185,46 +185,28 @@ function hideLogin(){
   }
   let resp=1;
   function getBubbleContent(data) {
-    
+    console.log(data.accesibilidad);
     //preguntar si la ubicacion es cercana o lejana y dibujar un tipo u otro de card
     if(resp===1){
       return [
-        '<div id="card" class="row minh-100 justify-content-center">',
-        '<div class="col-10 mt-3 col-md-4 postal text-center">',
-            '<p class="titulo-postal pt-3"><span class="morado">Barrio Recoleta</span><br>',
-                'Cementerio general',
-            '</p>',
-           '<img class="img-postal" src="./img/imagen-ejemplo.png" alt="imagen ejemplo">',
-            '<div class="row pt-2">',
-                '<div class="col-5 offset-1">',
-                    '<p class="subtitulo-postal">',
-                        'Horario',
-                    '</p>',
-                    '<p class="texto-postal">',
-                        'Lunes a domingo',
-                        '9:00 a 17:30 hrs.',
-                    '</p>',
-                '</div>',
-                '<div class="col-6">',
-                    '<p class="subtitulo-postal">',
-                        'Dirección',
-                    '</p>',
-                    '<p class="texto-postal">',
-                        'Prof. Zañartu 951,',
-                        'Recoleta, Santiago',
-                    '</p>',
-                '</div>',
-            '</div>',
-            '<div class="box-iconos pt-3">',
-                '<img src="./img/accesibilidad.png" alt="">',
-                '<img src="./img/gratis.png" alt="">',
-                '<img src="./img/banos.png" alt="">',
-            '</div>',
-            '<div>',
-                '<button type="button" class="text-center col-10 mt-3 btn-registrar" id="comoLlegar" onclick="routButoon()">¿Cómo llegar?</button>',
-            '</div>',
-        '</div>',
-    '</div>',
+        '<div class="bubble">',
+        '<p>'+data.barrio+'</p>',
+        '<p>'+data.title+'</p>',
+        '<a class="bubble-image" ',
+          'style="background-image: url(', data.fullurl, ')" ',
+          'href="', data.url, '" target="_blank">',
+        '</a>',
+        '<p>'+data.horario+'</p>',
+        '<p>'+data.direccion+'</p>',
+        '<div class="box-iconos pt-3">',
+          data.accesibilidad? '<img src="./img/accesibilidad.png" alt="">':'',
+          data.gratis?'<img src="./img/gratis.png" alt="">':'',
+          data.banos?'<img src="./img/banos.png" alt="">':'',
+      '</div>',
+      '<div>',
+               '<button type="button" class="text-center col-10 mt-3 btn-registrar" id="comoLlegar" onclick="routButoon()">¿Cómo llegar?</button>',
+           '</div>',
+      '</div>'
       ].join('');
     }
     else{
@@ -347,6 +329,7 @@ function hideLogin(){
   function loadPoint(){
     console.log("leyebdo puntos");
     $.getJSON("data/pointJson.json", function (data) {
+      console.log(data);
       startClustering(map, ui, getBubbleContent, data);
     });
   }

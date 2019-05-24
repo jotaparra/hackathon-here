@@ -34,8 +34,8 @@ function startClustering(map, ui, getBubbleContent, data) {
         
       var clusterMarker = new H.map.Marker(cluster.getPosition(), {
         icon: new H.map.Icon(data.thumbnail, {
-          size: {w: 50, h: 50},
-          anchor: {x: 25, y: 25}
+          size: {w: 80, h: 80},
+          anchor: {x: 35, y: 35}
         }),
   
         min: cluster.getMinZoom(),
@@ -52,8 +52,8 @@ function startClustering(map, ui, getBubbleContent, data) {
         noiseMarker = new H.map.Marker(noisePoint.getPosition(), {
           min: noisePoint.getMinZoom(),
           icon: new H.map.Icon(data.thumbnail, {
-            size: {w: 20, h: 20},
-            anchor: {x: 10, y: 10}
+            size: {w: 30, h: 30},
+            anchor: {x: 25, y: 25}
           })
         });
       noiseMarker.setData(data);
@@ -121,7 +121,7 @@ function startClustering(map, ui, getBubbleContent, data) {
   function moveMapToBerlin(map,op,position){
     if(op===1){
       map.setCenter({lat: position.coords.latitude , lng:position.coords.longitude});
-      map.setZoom(16);
+      map.setZoom(15);
     }
   }
 
@@ -162,9 +162,9 @@ function hideLogin(){
   var marker=0;
   var markerAnt=0;
   function showPosition(position){
-   var icon= new H.map.Icon("./img/icon.gif", {
-      size: {w: 20, h: 20},
-      anchor: {x: 10, y: 10}
+   var icon= new H.map.Icon("./img/icon.png", {
+      size: {w: 50, h: 50},
+      anchor: {x: 20, y: 20}
     });
    if(marker === 0){
     marker = new H.map.Marker({lat: position.coords.latitude , lng:position.coords.longitude}, { icon: icon},{optimized:false});
@@ -188,15 +188,24 @@ function hideLogin(){
     //preguntar si la ubicacion es cercana o lejana y dibujar un tipo u otro de card
     if(resp===1){
       return [
-        '<div class="bubble">',
-        '<p>'+data.barrio+'</p>',
-        '<p>'+data.title+'</p>',
+        '<div class="row">',
+        '<div class="col-12 col-md-4 postal text-center">',
+        '<p class="titulo-postal pt-3"><span class="morado">'+data.barrio+'</span><br>'
+        +data.title+'</p>',
         '<a class="bubble-image" ',
           'style="background-image: url(', data.fullurl, ')" ',
           'href="', data.url, '" target="_blank">',
         '</a>',
-        '<p>'+data.horario+'</p>',
-        '<p>'+data.direccion+'</p>',
+        '<div class="row pt-2">',
+        '<div class="col-5">',
+        '<p class="subtitulo-postal">'+'Horario:'+'</p>',
+        '<p class="texto-postal">'+data.horario+'</p>',
+        '</div>',
+        '<div class="col-5">',
+        '<p class="subtitulo-postal">'+'Dirección'+'</p>',
+        '<p class="texto-postal">'+data.direccion+'</p>',
+        '</div>',
+        '</div>',
         '<div class="box-iconos pt-3">',
           data.accesibilidad? '<img src="./img/accesibilidad.png" alt="">':'',
           data.gratis?'<img src="./img/gratis.png" alt="">':'',
@@ -205,7 +214,7 @@ function hideLogin(){
       '<div>',
                '<button type="button" class="text-center col-10 mt-3 btn-registrar" id="comoLlegar" onclick="routButoon()">¿Cómo llegar?</button>',
            '</div>',
-      '</div>'
+      '</div>',
       ].join('');
     }
     else{
@@ -349,7 +358,7 @@ function hideLogin(){
         console.log(item);  
         addMarkerToGroup(group, {lat: item.latitude , lng:item.longitude},
           '<div><p>'+item.title+'</p>'+
-          '<p>'+item.texto+'</p>'+
+          '<p class="cardDead">'+item.texto+'</p>'+
           '<a class="bubble-image" ',
           'style="background-image: url(', item.thumbnail, ')" ',
           'href="', item.fullurl, '" target="_blank">',

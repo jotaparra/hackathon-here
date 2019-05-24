@@ -7,6 +7,24 @@
 /* #splash{
     display: none; */
 
+h2{
+    font-size: 2.5rem;
+    FONT-FAMILY: serif;
+    TEXT-ALIGN: center;
+}
+
+body{
+    background-color: #F3F0DF !important;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* sección splash */
+
+/* #splash{
+    display: none; */
+
 .background-body{
   background-color: #F3F0DF;
   
@@ -15,10 +33,6 @@
     height: 100vh;
 }
 
-/* sección presentación */
-/* #presentacion{
-    display:none;
-} */
 #presentacion p{
     font-size: 18px;
 }
@@ -79,58 +93,6 @@ h3{
     border: 1px solid #67377D;
 }
 
-/* .mostrar-logos{
-    display: none;
-}
-
-.logos-rrss {
-    justify-content: center;
-    text-align: center;
-}
-
-.logos-rrss a {
-    font-size: 25px;
-    color: azure;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 5px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.logos-rrss a:hover{
-    opacity: 0.6;
-    text-decoration: none;
-    transition: 0.4s;
-}
-
-.btn-rrss{
-    background: none;
-    border: 0;
-     color: inherit;
-
-     font: inherit;
-     line-height: normal;
-
-.azul-facebook{
-    background-color: #3b5998;
-}
-
-.celeste-twitter{
-    background-color: #1da1f2;
-}
-.rojo-googlemas{
-    background-color: #ea4335;
-} */
-
-/* Navbar */
-
-/* #nav{
-    display:none;
-} */
 
 .bottom{
   box-shadow: 5px 3px 15px rgba(0, 0, 0, 0.4);
@@ -151,6 +113,69 @@ h3{
 /* sección activar ubicación */
 #activarUbicacion{
     position: relative;
+}
+
+.mensajes{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color:#545454;
+}
+
+/* card de los puntos historicos */
+.postal{
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-postal{
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+color: #545454;
+}
+.morado{
+    color: #67377D;
+}
+.img-postal{
+    border: 1px solid #67377D;
+}
+
+.subtitulo-postal{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 0px;
+    color: #545454;
+}
+
+.texto-postal{
+    font-style: normal;
+    font-size: 12px;
+    margin: 0px;
+    color: #545454;
+}
+
+/* card llegaste al punto */
+.miniatura {
+    font-size: 11px;
+}
+.bold{
+    font-weight:bold;
+    color: #555555;
+}
+
+#mapa{
+    display: none;
+}
+
+
+/* card tesoro ganado */
+.explora{
+    font-size: 14px;
+    color: #545454;
 }
 
 .mensajes{
@@ -218,4 +243,14 @@ line-height: 19px;
     width: 300px;
     margin-left: 4%;
     margin-top: 6%;
+}
+
+.row{
+    margin-top: 7% !important;
+    margin-left: 6% !important;
+    margin-right: 6% !important;
+}
+
+.cardDead{
+    font-size: 14px;
 }
